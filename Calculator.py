@@ -21,6 +21,10 @@ def clicked(n):
 def clear():
     return e.delete(0,END)
 
+def clearAll():
+    e.delete(0,END)
+    first_value=''
+
 def add():
     global first_value,sign
     sign = '+'
@@ -92,8 +96,8 @@ def equal():
 #Def
 
 
-e = Entry(root, width=47, borderwidth=3)
-e.grid(row=0, column=0, columnspan=4, padx=8, pady=8)
+e = Entry(root, width=45, borderwidth=3)
+e.grid(row=0, column=0, columnspan=4, padx=0, pady=8)
 
 
 
@@ -109,7 +113,7 @@ button_7 = Button(root, text="7", padx=40, pady=20,command=lambda : clicked(7))
 button_8 = Button(root, text="8", padx=40, pady=20,command=lambda : clicked(8))
 button_9 = Button(root, text="9", padx=40, pady=20,command=lambda : clicked(9))
 
-button_0 = Button(root, text="0", padx=91, pady=20,command=lambda : clicked(0))
+button_0 = Button(root, text="0", padx=89, pady=20,command=lambda : clicked(0))
 button_decimal = Button(root, text=".", padx=42, pady=20,command=decimal)
 
 button_clear = Button(root, text="C", padx=38, pady=20,command=clear)
