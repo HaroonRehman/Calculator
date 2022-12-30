@@ -22,8 +22,10 @@ def clear():
     return e.delete(0,END)
 
 def clearAll():
+    global first_value,sign
     e.delete(0,END)
     first_value=''
+    sign=''
 
 def add():
     global first_value,sign
@@ -117,7 +119,7 @@ button_0 = Button(root, text="0", padx=89, pady=20,command=lambda : clicked(0))
 button_decimal = Button(root, text=".", padx=42, pady=20,command=decimal)
 
 button_clear = Button(root, text="C", padx=38, pady=20,command=clear)
-button_Allclear = Button(root, text="AC", padx=34, pady=20,command=clear)
+button_Allclear = Button(root, text="AC", padx=34, pady=20,command=clearAll)
 button_plus = Button(root, text="+", padx=40, pady=8,command=add)
 button_minus = Button(root, text="-", padx=40, pady=8,command=sub)
 button_mul = Button(root, text="*", padx=40, pady=8,command=mul)
