@@ -4,7 +4,8 @@ import re
 root = Tk()
 
 root.title('Calculator')
-
+icon = PhotoImage(file='calculator.png')
+root.iconphoto(False,icon)
 
 #Functions
 
